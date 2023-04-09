@@ -14,7 +14,7 @@ export const generate = async (req, res) => {
       prompt: prompt,
       // number of images to generate
       n: 1,
-      size: "512x512",
+      size: "256x256",
       response_format: "b64_json",
     });
     const image = ai.data.data[0].b64_json;
