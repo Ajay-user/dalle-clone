@@ -25,7 +25,9 @@ const Home = () => {
     const fetchPhotos = async () => {
       try {
         setLoading(true);
-        const { data } = await axios.get("http://localhost:8080/api/v1/post/");
+        const { data } = await axios.get(
+          "https://dalle-imag-gen.onrender.com/api/v1/post/"
+        );
         if (data.success) {
           setAllPost(data.data.reverse());
         }
